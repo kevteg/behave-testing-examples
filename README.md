@@ -1,2 +1,3 @@
 # behave-testing-examples
-Examples of behavioral testing
+
+Simple examples of behavioral and unit testing for Pycon Colombia 2021 edition
