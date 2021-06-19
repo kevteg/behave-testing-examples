@@ -14,3 +14,19 @@ def test_basic_fields(tax):
     new_product = Product(product_name, base_price, tax)
     assert new_product.name == product_name.title()
     assert new_product.price == base_price + base_price*(tax/100)
+
+
+@pytest.mark.parametrize("n_tax", [-15, 200, 56])
+def test_tax_value(n_tax):
+    '''
+    Check the tax value is expected
+    '''
+    try:
+        product_name = "the product title"
+        base_price = 100
+        new_product = Product(product_name, base_price, n_tax)
+        assert False
+    except WrongTaxField:
+        assert True
+    except:
+        assert False
