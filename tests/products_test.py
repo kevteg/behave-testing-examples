@@ -16,7 +16,7 @@ def test_basic_fields(tax):
     assert new_product.price == base_price + base_price*(tax/100)
 
 
-@pytest.mark.parametrize("n_tax", [-15, 200, 56])
+@pytest.mark.parametrize("n_tax", [-15, 299])
 def test_tax_value(n_tax):
     '''
     Check the tax value is expected
